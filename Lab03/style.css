@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+    color: white;
+}
+.Author{
+    color: crimson;
+    font-size: xx-large;
+}
+#image{
+    color: black;
+    background-color: black;
+}
+h3{
+    color: rgb(51, 81, 233);
+    font-size: 1.5rem;;
+}
+a:hover{
+   font-size: 1.5rem; 
+   color: aqua;
+}
+a{
+    text-decoration: none;
+    color: rgb(185, 155, 212);
+}
