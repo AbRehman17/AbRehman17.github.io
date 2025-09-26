@@ -3,7 +3,7 @@ body{
     color: white;
 }
 .Author{
-    color: burlywood;
+    color: rgb(224, 170, 101);
     font-size: xx-large;
 }
 #image{
@@ -11,14 +11,16 @@ body{
     background-color: black;
 }
 h3{
-    color: rgb(51, 81, 233);
-    font-size: 1.5rem;;
+    color: burlywood;
+    font-size: 1.5rem;
 }
 a:hover{
    font-size: 1.5rem; 
-   color: aqua;
+   color: brown
 }
 a{
     text-decoration: none;
-    color: rgb(185, 155, 212);
+    color: rgb(226, 139, 24);
+    font-weight: bold;
+    text-decoration: underline;
 }
