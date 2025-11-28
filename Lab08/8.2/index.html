@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="author">
+      <h1>Muhammad Hussain Abdul Rehman</h1>
+      <p>Computer Science Student | Developer | Innovator</p>
+    </header>
+
+    <hr />
+
+    <main class="grid-container">
+      <div class="image">
+        <img src="html.jpeg" alt="HTML Logo" id="htmlImage" />
+      </div>
+
+      <div class="skills">
+        <h3>Expertise</h3>
+        <ul>
+          <li>C++</li>
+          <li>C#</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>HTML</li>
+        </ul>
+      </div>
+
+      <div class="areasOfInterest">
+        <h3>Areas of Interest</h3>
+        <p>
+          Passionate about web development, AI, and creative problem-solving. I
+          enjoy building digital tools and experiences that make life easier and
+          more meaningful.
+        </p>
+      </div>
+    </main>
+
+    <section class="education">
+      <h3>Educational Background</h3>
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Institute</th>
+            <th>Grade / CGPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BS Computer Science</td>
+            <td>
+              <a href="https://qau.edu.pk/" target="_blank"
+                >Quaid-i-Azam University, Islamabad</a
+              >
+            </td>
+            <td>3.56 CGPA</td>
+          </tr>
+          <tr>
+            <td>Intermediate (Pre-Engineering)</td>
+            <td>Government Graduate College Model Town</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>Matriculation (Science)</td>
+            <td>Allied School</td>
+            <td>99%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="projects-section">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Web Portfolio</h4>
+          <p>
+            A responsive portfolio website built with HTML, CSS, and JavaScript.
+          </p>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h4>Mobile App</h4>
+          <p>
+            A cross-platform mobile application developed using React Native.
+          </p>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h4>Data Analysis Tool</h4>
+          <p>A Python-based tool for data visualization and analysis.</p>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h3>Basic Information Form</h3>
+      <form class="info-form">
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="message">About You:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="3"
+          placeholder="Write something about yourself..."
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        All Rights Reserved &copy; 2025 | Designed by
+        <strong>Abdul Rehman</strong>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
