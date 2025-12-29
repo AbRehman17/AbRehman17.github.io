@@ -1,0 +1,37 @@
+[
+  {
+    "id": "P001",
+    "name": "Fast Charger",
+    "category": "Accessories",
+    "price": 2500,
+    "brand": "Anker"
+  },
+  {
+    "id": "P002",
+    "name": "Wireless Airbuds",
+    "category": "Audio",
+    "price": 6000,
+    "brand": "Samsung"
+  },
+  {
+    "id": "P003",
+    "name": "Gaming Headset",
+    "category": "Audio",
+    "price": 7500,
+    "brand": "HyperX"
+  },
+  {
+    "id": "P004",
+    "name": "Bluetooth Speaker",
+    "category": "Audio",
+    "price": 4500,
+    "brand": "JBL"
+  },
+  {
+    "id": "P005",
+    "name": "MacBook Pro",
+    "category": "Laptop",
+    "price": 350000,
+    "brand": "Apple"
+  }
+]

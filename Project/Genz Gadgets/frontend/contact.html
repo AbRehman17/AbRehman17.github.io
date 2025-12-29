@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Gen Z Gadgets</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="logo">Gen Z Gadgets</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Products</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="review.html">Reviews</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="cart.html" class="cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge">0</span>
+          </a>
+        </div>
+        <div class="hamburger">&#9776;</div>
+      </nav>
+    </header>
+
+    <main class="contact-us-page">
+      <section class="page-hero">
+        <h1>Get In Touch</h1>
+      </section>
+
+      <section class="contact-info-block">
+        <h2>Our Support Channels</h2>
+        <div class="contact-cards-container">
+          <div class="contact-card">
+            <i class="far fa-envelope"></i>
+            <h3>Email Support</h3>
+            <p>For inquiries and order issues.</p>
+            <a href="mailto:support@yourstore.com">support@yourstore.com</a>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>Quick chat support (Mon-Fri, 9am-5pm).</p>
+            <p>+1 (234) 567-890</p>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Physical Address</h3>
+            <p>Visit our main office.</p>
+            <address>123 Tech Street, City, Country</address>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <h2>Send Us A Message</h2>
+        <form id="contact-form">
+          <input type="text" id="msg-name" placeholder="Your Name" required />
+          <input
+            type="email"
+            id="msg-email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            id="msg-message"
+            placeholder="Your Message"
+            rows="6"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+          <p id="form-status" style="margin-top: 1rem; font-weight: bold"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">All Laptops</a></li>
+            <li><a href="#">Gaming Laptops</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center & FAQ</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Warranty Information</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-info">
+          <h4>Contact Us</h4>
+          <p>Email: p.rehman2005@gmail.com</p>
+          <p>Phone: +92 316 0624373</p>
+          <p>Address: Lahore, Pakistan</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gen Z Gadgets. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/main.js"></script>
+  <script>
+    document
+      .getElementById('contact-form')
+      .addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        const name = document.getElementById('msg-name').value.trim()
+        const email = document.getElementById('msg-email').value.trim()
+        const message = document.getElementById('msg-message').value.trim()
+        const status = document.getElementById('form-status')
+
+        if (!name || !email || !message) {
+          status.textContent = 'Please fill all fields!'
+          status.style.color = 'red'
+          return
+        }
+
+        try {
+          const res = await fetch('/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message }),
+          })
+
+          if (res.ok) {
+            status.textContent =
+              'Thank you! Your message has been sent successfully.'
+            status.style.color = 'green'
+            document.getElementById('contact-form').reset()
+          } else {
+            status.textContent = 'Error sending message. Try again.'
+            status.style.color = 'red'
+          }
+        } catch (err) {
+          status.textContent = 'Network error. Check server.'
+          status.style.color = 'red'
+        }
+      })
+  </script>
+</html>

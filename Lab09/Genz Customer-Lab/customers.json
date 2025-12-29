@@ -1,0 +1,23 @@
+[
+  {
+    "id": "C001",
+    "name": "Ali Khan",
+    "email": "ali@example.com",
+    "phone": "03001234567",
+    "address": "Islamabad, Pakistan"
+  },
+  {
+    "id": "C002",
+    "name": "Sara Ahmed",
+    "email": "sara@example.com",
+    "phone": "03007654321",
+    "address": "Lahore, Pakistan"
+  },
+  {
+    "id": "C003",
+    "name": "Hassan Raza",
+    "email": "hassan@example.com",
+    "phone": "03101239876",
+    "address": "Karachi, Pakistan"
+  }
+]

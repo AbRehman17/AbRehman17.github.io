@@ -1,0 +1,26 @@
+[
+  {
+    "id": "O001",
+    "customerId": "C001",
+    "productId": "P003",
+    "quantity": 1,
+    "totalPrice": 7500,
+    "date": "2025-12-13"
+  },
+  {
+    "id": "O002",
+    "customerId": "C002",
+    "productId": "P002",
+    "quantity": 2,
+    "totalPrice": 12000,
+    "date": "2025-12-12"
+  },
+  {
+    "id": "O003",
+    "customerId": "C003",
+    "productId": "P005",
+    "quantity": 1,
+    "totalPrice": 350000,
+    "date": "2025-12-10"
+  }
+]
